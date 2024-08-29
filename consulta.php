@@ -1,8 +1,7 @@
-<?
+<?php
 include "conecta.php";
-
 echo "<br><b>Mostrando todos os registros</b><br><br>";
-$sql = "SELECT id, descrição, fabricante, quantidade, preco_custo, preco_venda, imagem FROM produtos";
+$sql = 'SELECT * FROM produtos';
 $resultado = mysqli_query($conexao, $sql);
 if (mysqli_num_rows($resultado) > 0) {
     while($registro = mysqli_fetch_assoc($resultado)) {
