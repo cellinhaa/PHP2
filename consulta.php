@@ -5,7 +5,7 @@ $sql = 'SELECT * FROM produtos';
 $resultado = mysqli_query($conexao, $sql);
 if (mysqli_num_rows($resultado) > 0) {
     while($registro = mysqli_fetch_assoc($resultado)) {
-        echo "Id: " . $registro["id"]. "Descrição: " . $registro["descrição"]. "Fabricante: " . $registro["fabricante"]. "Preço custo " . $registro["preco_custo"]. "Preço venda: ".$registro["preco_venda"]."Imagem".$registro["imagem"]."<br>";
+        echo "Id:" . $registro["id"]. "<br> Descrição: " . $registro["descrição"]. "<br> Fabricante: " . $registro["fabricante"]. "<br> Preço custo: " . $registro["preco_custo"]. "<br> Preço venda: ".$registro["preco_venda"]."<br>Imagem<br>".$registro["imagem"]."<br>";
     }
 } else {
     echo "Nenhum registro encontrado.";
