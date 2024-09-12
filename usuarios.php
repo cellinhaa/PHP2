@@ -5,25 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>document</title>
     <style>
+        body{
+            font-family: "Vag Rounded Bold", cursive;   
+        }
+        header{
+            background: #07c7ff;
+            width: 100%;
+        
+        }
+        
         main{
             display: flex;
         }
         ul{
             display: flex;
             list-style: none;
+            height: 80px;
+            font-weight: bold;
         }
         li{
             padding: 5px;
         }
-        a{
-            color: palevioletred;
-            text-decoration: none;
-            font-size: larger;
+        *{
+            margin: 0;
         }
-        a:hover{
-            background-color: RGB(209, 90, 90);
-            color: RGB(112, 178, 207);
-            padding: 10px;
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 20px;        
         }
         img {
             width: 150px;
@@ -47,6 +56,7 @@
             background-color: RGB(112, 178, 207);
             color:lightblue;
         }
+        
 
     </style>
 </head>
@@ -54,13 +64,14 @@
     <header>
         <nav>
             <ul>
-                <li><a href="">home</a></li>
-                <li><a href="">contatos</a></li>
-                <li><a href="">sobre</a></li>
-                <li><a href="">login</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Contato</a></li>
+                <li><a href="">Sobre</a></li>
+                <li><a href="">Cadastro</a></li>
             </ul>
         </nav>
     </header>
+   
     <main>
         <div id="imagem"><img src="kitty.png.png" alt=""></div>
         <div id="dados">  
@@ -68,7 +79,8 @@
         <tr>
             <th>Id: </th>
             <th>Descrição: </th>
-            <th>Fabricante: </th>
+             <th>Fabricante: </th>
+             <th>Quantidade: </th>
             <th>Preço custo: </th>
             <th>Preço venda: </th>
         </tr>
@@ -84,6 +96,7 @@ if (mysqli_num_rows($resultado) > 0) {
         echo "<td>". $registro["id"]. "</td>";
         echo "<td>". $registro["descrição"]."</td>";
         echo "<td>" . $registro["fabricante"]."</td>";
+        echo "<td>". $registro["quantidade"]."</td>";
         echo "<td>" . $registro["preco_custo"]."</td>";
         echo "<td>". $registro["preco_venda"]."</td></tr>";
     }
